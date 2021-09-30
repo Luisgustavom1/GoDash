@@ -89,7 +89,7 @@ const Header: React.FC = () => {
             <Avatar 
                 size='md' 
                 name='Luis Gustavo' 
-                src='luisgustavomacedo13@gmail.com' 
+                src='https://github.com/luisgustavom1.png' 
             />
         </Flex>
       </Flex>
