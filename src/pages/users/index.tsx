@@ -1,10 +1,15 @@
-import { Box, Flex, Heading, Button, Icon, Table, Thead, Checkbox, Tr, Th, Td, Tbody, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, Button, Icon, Table, Thead, Checkbox, Tr, Th, Td, Tbody, Text, useBreakpointValue } from '@chakra-ui/react';
 import { RiAddLine, RiEditLine } from 'react-icons/ri';
 import Header from '../../components/Header';
 import { Pagination } from '../../components/Pagination';
 import Sidebar from '../../components/Sidebar';
 
 export default function UsersList() {
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true
+    })
+
     return (
         <Box>
             <Header /> 
@@ -36,13 +41,13 @@ export default function UsersList() {
                                     <Checkbox colorScheme='pink'/>
                                 </Th>
                                 <Th>Usuário</Th>
-                                <Th>Data de Cadastro</Th>
+                                {isWideVersion && <Th>Data de Cadastro</Th>}
                                 <Th width='8'></Th>
                             </Tr>
                         </Thead>
                         <Tbody>
                             <Tr>
-                                <Td px='6'>
+                                <Td p={['4', '4', '6']}>
                                     <Checkbox colorScheme='pink'/>
                                 </Td>
                                 <Td>
@@ -51,10 +56,10 @@ export default function UsersList() {
                                         <Text fontSize='sm' color='gray.300'>luisgustavomacedo13@gmail.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>
+                                { isWideVersion && <Td>
                                     04 de Outubro, 2021
-                                </Td>
-                                <Td>
+                                </Td> }
+                                {isWideVersion && <Td>
                                     <Button 
                                         as='a'
                                         colorScheme='purple'
@@ -64,10 +69,10 @@ export default function UsersList() {
                                     >
                                         Editar
                                     </Button>
-                                </Td>
+                                </Td>}
                             </Tr>
                             <Tr>
-                                <Td px='6'>
+                                <Td p={['4', '4', '6']}>
                                     <Checkbox colorScheme='pink'/>
                                 </Td>
                                 <Td>
@@ -76,10 +81,10 @@ export default function UsersList() {
                                         <Text fontSize='sm' color='gray.300'>luisgustavomacedo13@gmail.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>
+                                { isWideVersion && <Td>
                                     04 de Outubro, 2021
-                                </Td>
-                                <Td>
+                                </Td> }
+                                {isWideVersion && <Td>
                                     <Button 
                                         as='a'
                                         colorScheme='purple'
@@ -89,10 +94,10 @@ export default function UsersList() {
                                     >
                                         Editar
                                     </Button>
-                                </Td>
+                                </Td>}
                             </Tr>
                             <Tr>
-                                <Td px='6'>
+                                <Td p={['4', '4', '6']}>
                                     <Checkbox colorScheme='pink'/>
                                 </Td>
                                 <Td>
@@ -101,10 +106,10 @@ export default function UsersList() {
                                         <Text fontSize='sm' color='gray.300'>luisgustavomacedo13@gmail.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>
+                                { isWideVersion && <Td>
                                     04 de Outubro, 2021
-                                </Td>
-                                <Td>
+                                </Td> }
+                                {isWideVersion && <Td>
                                     <Button 
                                         as='a'
                                         colorScheme='purple'
@@ -114,10 +119,10 @@ export default function UsersList() {
                                     >
                                         Editar
                                     </Button>
-                                </Td>
+                                </Td>}
                             </Tr>
                             <Tr>
-                                <Td px='6'>
+                                <Td p={['4', '4', '6']}>
                                     <Checkbox colorScheme='pink'/>
                                 </Td>
                                 <Td>
@@ -126,10 +131,10 @@ export default function UsersList() {
                                         <Text fontSize='sm' color='gray.300'>luisgustavomacedo13@gmail.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>
+                                { isWideVersion && <Td>
                                     04 de Outubro, 2021
-                                </Td>
-                                <Td>
+                                </Td> }
+                                {isWideVersion && <Td>
                                     <Button 
                                         as='a'
                                         colorScheme='purple'
@@ -139,7 +144,7 @@ export default function UsersList() {
                                     >
                                         Editar
                                     </Button>
-                                </Td>
+                                </Td>}
                             </Tr>
                         </Tbody>
                     </Table>
