@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Button, Icon, Table, Thead, Checkbox, Tr, Th, Td, T
 import { RiAddLine, RiEditLine } from 'react-icons/ri';
 import Header from '../../components/Header';
 import { Pagination } from '../../components/Pagination';
-import Sidebar from '../../components/Siderbar';
+import Sidebar from '../../components/Sidebar';
 
 export default function UsersList() {
     return (
