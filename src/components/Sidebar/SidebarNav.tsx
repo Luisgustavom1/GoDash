@@ -8,20 +8,20 @@ export const SidebarNav = () => {
         <Stack spacing='12'>
             <Box>
                 <NavSection title='GERAL'>
-                    <NavLink icon={RiDashboardLine}>
+                    <NavLink icon={RiDashboardLine} href='/dashboard'>
                         Dashboard
                     </NavLink>
-                    <NavLink icon={RiContactsLine}>
+                    <NavLink icon={RiContactsLine} href='/users'>
                         Usuários
                     </NavLink>
                 </NavSection>
             </Box>
             <Box>
                 <NavSection title='AUTOMAÇÃO'>
-                    <NavLink icon={RiInputMethodLine}>
+                    <NavLink icon={RiInputMethodLine} href='/forms'>
                         Formulários
                     </NavLink>
-                    <NavLink icon={RiGitMergeLine}>
+                    <NavLink icon={RiGitMergeLine} href='/automations'>
                         Automação
                     </NavLink>
                 </NavSection>

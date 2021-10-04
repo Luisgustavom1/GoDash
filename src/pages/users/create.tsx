@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Box, Flex, Heading, Divider, SimpleGrid, VStack, HStack, Button } from '@chakra-ui/react';
 
 import Input from '../../components/Form/input';
@@ -30,7 +31,9 @@ export default function UsersList() {
                     </VStack> 
                     <Flex mt='8' justify='flex-end'>
                         <HStack spacing='4'>
-                            <Button colorScheme='whiteAlpha'>Cancelar</Button>
+                            <Link href='/users' passHref>
+                                <Button colorScheme='whiteAlpha'>Cancelar</Button>                            
+                            </Link>
                             <Button colorScheme='pink'>Salvar</Button>
                         </HStack>
                     </Flex>
