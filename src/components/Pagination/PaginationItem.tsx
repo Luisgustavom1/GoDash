@@ -3,10 +3,11 @@ import React from "react";
 
 interface PaginationItem {
     isCurrent: boolean;
-    number: number
+    number: number;
+    onPageChange: (page: number) => void;
 }
 
-export const PaginationItem = ({ isCurrent = false, number }) => {
+export const PaginationItem = ({ isCurrent = false, number, onPageChange }) => {
     if(isCurrent) {
         return (
             <Button
@@ -34,6 +35,7 @@ export const PaginationItem = ({ isCurrent = false, number }) => {
             _hover={{
                 bg:'gray.500'
             }}
+            onClick={() => onPageChange(number)}
         >
             {number}
         </Button>
