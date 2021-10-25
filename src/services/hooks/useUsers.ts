@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery, UseQueryOptions } from "react-query";
 import { api } from "../api";
 
 interface IUser {
@@ -39,8 +39,9 @@ export const getUsers = async (page: number): Promise<GetUsersType> => {
     };
 };
 
-export function useUsers(page: number) {
+export function useUsers(page: number, options: UseQueryOptions) {
     return useQuery(['users', page], () => getUsers(page), {
         staleTime: 1000 * 60 * 10,
+        ...options
     });
 };
